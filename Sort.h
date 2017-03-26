@@ -53,14 +53,14 @@ T** Sort<T>::quickSort(T** items, int num_items, int (*compare) (T* one, T* two)
 template < class T >
 void Sort<T>::_quickSort(T** items, int first, int last, int (*compare) (T* one, T* two))
 {
-   int pivotIndex;
+   int pivot;
 
    //DO THIS
    //make the necessary partition and recursive calls for quick sort
    if (first < last)
    {
 
-      pivotIndex = partition(items, first, last, compare);
+      pivot = partition(items, first, last, compare);
       _quickSort(items, first, pivotIndex - 1, compare);
       _quickSort(items, pivotIndex + 1, last, compare);
    }  
