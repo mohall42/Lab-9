@@ -44,7 +44,7 @@ T** Sort<T>::quickSort(T** items, int num_items, int (*compare) (T* one, T* two)
       sort[i] = items[i];
    }
 
-   _quickSort(sort, 0, num_items - 1, compare);
+   _quickSort(sort, 0, num_items, compare);
 
    return sort;
 
